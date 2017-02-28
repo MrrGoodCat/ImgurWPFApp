@@ -24,5 +24,15 @@ namespace ImgurWPF_Flat
         {
             InitializeComponent();
         }
+
+        private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void image3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
