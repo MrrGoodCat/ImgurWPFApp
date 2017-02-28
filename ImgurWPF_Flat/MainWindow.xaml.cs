@@ -20,9 +20,11 @@ namespace ImgurWPF_Flat
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool IsMaximized;
         public MainWindow()
         {
             InitializeComponent();
+            IsMaximized = false;
         }
 
         private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -30,9 +32,58 @@ namespace ImgurWPF_Flat
             this.DragMove();
         }
 
-        private void image3_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void CloseButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void CloseButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            CloseButton.Opacity = 0.5;
+        }
+
+        private void CloseButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            CloseButton.Opacity = 1;
+        }
+
+        private void MinimizeButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            MinimizeButton.Opacity = 0.5;
+        }
+
+        private void MinimizeButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
+
+        private void MinimizeButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            MinimizeButton.Opacity = 1;
+        }
+
+        private void MaximizeButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            MaximizeButton.Opacity = 0.5;
+        }
+
+        private void MaximizeButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            MaximizeButton.Opacity = 1;
+        }
+
+        private void MaximizeButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (IsMaximized)
+            {
+                SystemCommands.RestoreWindow(this);
+                IsMaximized = false;
+            }
+            else
+            {
+                SystemCommands.MaximizeWindow(this);
+                IsMaximized = true;
+            }
         }
     }
 }
