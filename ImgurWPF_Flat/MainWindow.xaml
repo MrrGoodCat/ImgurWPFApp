@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImgurWPF_Flat"
+        Icon="Images\unnamed.png"
         mc:Ignorable="d"
         Title="MainWindow" Height="576" Width="822" AllowsTransparency="True" WindowStyle="None" Background="#FF252E32">
     <Grid x:Name="ImgurMainWindow">
