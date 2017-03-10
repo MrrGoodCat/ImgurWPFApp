@@ -21,10 +21,12 @@ namespace ImgurWPF_Flat
     public partial class MainWindow : Window
     {
         private bool IsMaximized;
+        private bool IsExpandedMenu;
         public MainWindow()
         {
             InitializeComponent();
             IsMaximized = false;
+            IsExpandedMenu = true;
         }
 
         private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -84,6 +86,89 @@ namespace ImgurWPF_Flat
                 SystemCommands.MaximizeWindow(this);
                 IsMaximized = true;
             }
+        }
+
+        private void image1_Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Thickness marg;
+            if (IsExpandedMenu)
+            {
+                marg = ImgurLogo.Margin;
+                marg.Left = 50;
+                ImgurLogo.Margin = marg;
+
+                marg = image1_Copy.Margin;
+                marg.Left = 10;
+                image1_Copy.Margin = marg;
+
+                MenuPanel.Width = 49;
+
+                marg = button.Margin;
+                marg.Left = -49;
+                button.Margin = marg;
+
+                marg = button1.Margin;
+                marg.Left = -49;
+                button1.Margin = marg;
+
+                marg = button2.Margin;
+                marg.Left = -49;
+                button2.Margin = marg;
+
+                marg = button3.Margin;
+                marg.Left = -49;
+                button3.Margin = marg;
+
+                marg = button4.Margin;
+                marg.Left = -49;
+                button4.Margin = marg;
+
+                marg = button5.Margin;
+                marg.Left = -49;
+                button5.Margin = marg;
+
+                IsExpandedMenu = false;
+            }
+            else
+            {
+                marg = ImgurLogo.Margin;
+                marg.Left = 20;
+                ImgurLogo.Margin = marg;
+
+                marg = image1_Copy.Margin;
+                marg.Left = 200;
+                image1_Copy.Margin = marg;
+
+                MenuPanel.Width = 250;
+
+                marg = button.Margin;
+                marg.Left = -125;
+                button.Margin = marg;
+
+                marg = button1.Margin;
+                marg.Left = -200;
+                button1.Margin = marg;
+
+                marg = button2.Margin;
+                marg.Left = -200;
+                button2.Margin = marg;
+
+                marg = button3.Margin;
+                marg.Left = -200;
+                button3.Margin = marg;
+
+                marg = button4.Margin;
+                marg.Left = -200;
+                button4.Margin = marg;
+
+                marg = button5.Margin;
+                marg.Left = -200;
+                button5.Margin = marg;
+
+                IsExpandedMenu = true;
+            }
+
+            
         }
     }
 }
