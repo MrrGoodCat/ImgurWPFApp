@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ImgurWPF_Flat" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
+    <ControlTemplate x:Key="ButtonsTemplateBunny" TargetType="{x:Type Button}">
+        <Grid Width="200" Height="44" Background="#FF1A2028" RenderTransformOrigin="0.5,0.5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44" Cursor="Hand"/>
+                <ColumnDefinition Width="156" Cursor="Hand"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width, Height" FontSize="16" Foreground="#FF0066CC" FontFamily="Meiryo UI" FontWeight="Bold"/>
+            <Image x:Name="image" Grid.Column="0" HorizontalAlignment="Stretch" Margin="0" Width="36" Source="{Binding Background.ImageSource, RelativeSource={RelativeSource TemplatedParent}}" Stretch="Fill" Height="36"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="HomePage" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image" Margin="0" Source="images/HomePage.png" Width="32" Height="32"/>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width, Height" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+                <Setter Property="Source" TargetName="image" Value="images/HomePageOver.png"/>
+                <Setter Property="Cursor" TargetName="grid" Value="Hand"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonPopularTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="456"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image" Margin="0" Width="32" Height="32" Source="images/Popular.png"/>
+            <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width, Height" Width="136" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Source" TargetName="image" Value="images/Pop.png"/>
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+                <Setter Property="Cursor" TargetName="grid" Value="Hand"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonFavoriteTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" d:LayoutOverrides="Width, Height" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+            <Image x:Name="image" Margin="0" Width="32" Height="32" Source="images/Favorite.png"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Source" TargetName="image" Value="images/Fav.png"/>
+                <Setter Property="Cursor" TargetName="grid" Value="Hand"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonChatTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028" Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image" Grid.Column="0" Height="32" Margin="0" VerticalAlignment="Stretch" Width="32" Source="images/ImgurChat.png"/>
+            <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Stretch" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width" VerticalAlignment="Stretch" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Source" TargetName="image" Value="images/Chat.png"/>
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonMemesTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028" Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width, Height" HorizontalAlignment="Stretch" Width="Auto" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+            <Image x:Name="image" Margin="0" Width="32" Height="32" Source="images/Memes.png"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Source" TargetName="image" Value="images/MemesOver.png"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonSettingsTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF1A2028" Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="44"/>
+                <ColumnDefinition Width="156"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Stretch" d:LayoutOverrides="Width" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="#FF0066CC"/>
+            <Image x:Name="image" Margin="0" Width="32" Height="32" Source="images/settingsOrig.png"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" TargetName="textBlock" Value="Black"/>
+                <Setter Property="Background" TargetName="grid" Value="#FF0066CC"/>
+                <Setter Property="Source" TargetName="image" Value="images/settings.png"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>

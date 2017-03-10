@@ -17,12 +17,12 @@
         </Grid.ColumnDefinitions>
         <DockPanel x:Name="MenuPanel" HorizontalAlignment="Left" Height="{Binding ActualHeight, ElementName=window, Mode=OneWay}" LastChildFill="False" Margin="0" VerticalAlignment="Top" Width="250" Background="#FF1A2028">
             <Image x:Name="ImgurLogo" Height="50" VerticalAlignment="Top" Width="130" Source="Images/Imgur_logo.png" Margin="20,55,0,0"/>
-            <Button x:Name="button" Content="Main page" HorizontalAlignment="Left" Margin="-125,180,0,0" VerticalAlignment="Top" Width="200" Height="44"/>
-            <Button x:Name="button1" Content="Popular" HorizontalAlignment="Left" Margin="-200,224,0,0" VerticalAlignment="Top" Width="200" Height="44"/>
-            <Button x:Name="button2" Content="Favorites" HorizontalAlignment="Left" Margin="-200,268,0,0" VerticalAlignment="Top" Width="200" Height="44"/>
-            <Button x:Name="button3" Content="Imgur chat" HorizontalAlignment="Left" Margin="-200,312,0,0" VerticalAlignment="Top" Width="200" Height="44"/>
-            <Button x:Name="button4" Content="Memes generator" HorizontalAlignment="Left" Margin="-200,356,0,0" VerticalAlignment="Top" Width="200" Height="44"/>
-            <Button x:Name="button5" Content="Settings" HorizontalAlignment="Left" Margin="-200,0,0,120" VerticalAlignment="Bottom" Width="200" Height="44"/>
+            <Button x:Name="button" Content="Main page" HorizontalAlignment="Left" Margin="-125,180,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource HomePage}"/>
+            <Button x:Name="button1" Content="Popular" HorizontalAlignment="Left" Margin="-200,224,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonPopularTemplate}"/>
+            <Button x:Name="button2" Content="Favorites" HorizontalAlignment="Left" Margin="-200,268,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonFavoriteTemplate}"/>
+            <Button x:Name="button3" Content="Imgur chat" HorizontalAlignment="Left" Margin="-200,312,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonChatTemplate}"/>
+            <Button x:Name="button4" Content="Memes generator" HorizontalAlignment="Left" Margin="-200,356,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonMemesTemplate}"/>
+            <Button x:Name="button5" Content="Settings" HorizontalAlignment="Left" Margin="-200,0,0,120" VerticalAlignment="Bottom" Width="200" Height="44" Template="{DynamicResource ButtonSettingsTemplate}"/>
 
         </DockPanel>
         <DockPanel HorizontalAlignment="Left" Height="44" LastChildFill="False" Margin="0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=window, Mode=OneWay}" Background="#FF0066CC" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">

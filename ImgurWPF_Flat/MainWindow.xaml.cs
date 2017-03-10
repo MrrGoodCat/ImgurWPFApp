@@ -104,27 +104,27 @@ namespace ImgurWPF_Flat
                 MenuPanel.Width = 49;
 
                 marg = button.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button.Margin = marg;
 
                 marg = button1.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button1.Margin = marg;
 
                 marg = button2.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button2.Margin = marg;
 
                 marg = button3.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button3.Margin = marg;
 
                 marg = button4.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button4.Margin = marg;
 
                 marg = button5.Margin;
-                marg.Left = -49;
+                marg.Left = -44;
                 button5.Margin = marg;
 
                 IsExpandedMenu = false;
