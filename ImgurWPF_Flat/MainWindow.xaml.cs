@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -76,8 +78,10 @@ namespace ImgurWPF_Flat
 
         private void MaximizeButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            
             if (IsMaximized)
             {
+
                 SystemCommands.RestoreWindow(this);
                 IsMaximized = false;
             }
@@ -90,6 +94,8 @@ namespace ImgurWPF_Flat
 
         private void image1_Copy_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+
+            DoubleAnimation animation = new DoubleAnimation();
             Thickness marg;
             if (IsExpandedMenu)
             {
@@ -101,36 +107,45 @@ namespace ImgurWPF_Flat
                 marg.Left = 10;
                 image1_Copy.Margin = marg;
 
-                MenuPanel.Width = 49;
+                animation.From = 250;
+                animation.To = 49;
+                animation.Duration = new Duration(TimeSpan.FromMilliseconds(300));
+                MenuPanel.BeginAnimation(Panel.WidthProperty, animation);
+                //MenuPanel.Width = 49;
 
-                marg = button.Margin;
+                marg = MainPagebutton.Margin;
                 marg.Left = -44;
-                button.Margin = marg;
+                MainPagebutton.Margin = marg;
 
-                marg = button1.Margin;
+                marg = PopularButton.Margin;
                 marg.Left = -44;
-                button1.Margin = marg;
+                PopularButton.Margin = marg;
 
-                marg = button2.Margin;
+                marg = FavoritesButton.Margin;
                 marg.Left = -44;
-                button2.Margin = marg;
+                FavoritesButton.Margin = marg;
 
-                marg = button3.Margin;
+                marg = ImgurChatButton.Margin;
                 marg.Left = -44;
-                button3.Margin = marg;
+                ImgurChatButton.Margin = marg;
 
-                marg = button4.Margin;
+                marg = MemesButton.Margin;
                 marg.Left = -44;
-                button4.Margin = marg;
+                MemesButton.Margin = marg;
 
-                marg = button5.Margin;
+                marg = SettingsButton.Margin;
                 marg.Left = -44;
-                button5.Margin = marg;
+                SettingsButton.Margin = marg;
 
                 IsExpandedMenu = false;
             }
             else
             {
+                animation.From = 49;
+                animation.To = 250;
+                animation.Duration = new Duration(TimeSpan.FromMilliseconds(300));
+                MenuPanel.BeginAnimation(Panel.WidthProperty, animation);
+
                 marg = ImgurLogo.Margin;
                 marg.Left = 20;
                 ImgurLogo.Margin = marg;
@@ -139,31 +154,31 @@ namespace ImgurWPF_Flat
                 marg.Left = 200;
                 image1_Copy.Margin = marg;
 
-                MenuPanel.Width = 250;
+                //MenuPanel.Width = 250;
 
-                marg = button.Margin;
+                marg = MainPagebutton.Margin;
                 marg.Left = -125;
-                button.Margin = marg;
+                MainPagebutton.Margin = marg;
 
-                marg = button1.Margin;
+                marg = PopularButton.Margin;
                 marg.Left = -200;
-                button1.Margin = marg;
+                PopularButton.Margin = marg;
 
-                marg = button2.Margin;
+                marg = FavoritesButton.Margin;
                 marg.Left = -200;
-                button2.Margin = marg;
+                FavoritesButton.Margin = marg;
 
-                marg = button3.Margin;
+                marg = ImgurChatButton.Margin;
                 marg.Left = -200;
-                button3.Margin = marg;
+                ImgurChatButton.Margin = marg;
 
-                marg = button4.Margin;
+                marg = MemesButton.Margin;
                 marg.Left = -200;
-                button4.Margin = marg;
+                MemesButton.Margin = marg;
 
-                marg = button5.Margin;
+                marg = SettingsButton.Margin;
                 marg.Left = -200;
-                button5.Margin = marg;
+                SettingsButton.Margin = marg;
 
                 IsExpandedMenu = true;
             }
