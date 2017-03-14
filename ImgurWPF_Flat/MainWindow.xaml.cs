@@ -78,15 +78,15 @@ namespace ImgurWPF_Flat
 
         private void MaximizeButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            
             if (IsMaximized)
             {
-
+                MaximizeButton.Source = new ImageSourceConverter().ConvertFromString(@"D:\Git Projects\ImgurDesktop\ImgurWPF_Flat\ImgurWPF_Flat\Images\maximize.png") as ImageSource;
                 SystemCommands.RestoreWindow(this);
                 IsMaximized = false;
             }
             else
             {
+                MaximizeButton.Source = new ImageSourceConverter().ConvertFromString(@"D:\Git Projects\ImgurDesktop\ImgurWPF_Flat\ImgurWPF_Flat\Images\TabWindow.png") as ImageSource;
                 SystemCommands.MaximizeWindow(this);
                 IsMaximized = true;
             }
@@ -109,7 +109,7 @@ namespace ImgurWPF_Flat
 
                 animation.From = 250;
                 animation.To = 49;
-                animation.Duration = new Duration(TimeSpan.FromMilliseconds(300));
+                animation.Duration = new Duration(TimeSpan.FromMilliseconds(200));
                 MenuPanel.BeginAnimation(Panel.WidthProperty, animation);
                 //MenuPanel.Width = 49;
 
@@ -143,7 +143,7 @@ namespace ImgurWPF_Flat
             {
                 animation.From = 49;
                 animation.To = 250;
-                animation.Duration = new Duration(TimeSpan.FromMilliseconds(300));
+                animation.Duration = new Duration(TimeSpan.FromMilliseconds(200));
                 MenuPanel.BeginAnimation(Panel.WidthProperty, animation);
 
                 marg = ImgurLogo.Margin;
