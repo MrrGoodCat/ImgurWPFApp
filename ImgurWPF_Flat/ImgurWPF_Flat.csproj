@@ -157,6 +157,8 @@
     <Resource Include="Images\settingsOrig.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\icT.png" />
+    <Resource Include="Images\imgur.png" />
     <Resource Include="Images\TabWindow.png" />
     <Content Include="ImgurAPI\Imgur.API.dll" />
     <Resource Include="ImgurAPI\Imgur.API.xml" />

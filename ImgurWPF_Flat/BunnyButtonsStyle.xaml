@@ -116,5 +116,25 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <ControlTemplate x:Key="ButtonUserTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF0066CC">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="186"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="image" Grid.Column="0" HorizontalAlignment="Right" Margin="20,0,0,0" Width="44" Height="44" d:LayoutOverrides="LeftMargin, RightMargin" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="True" Source="{Binding Uid, RelativeSource={RelativeSource TemplatedParent}}">
+                <Image.Clip>
+                    <EllipseGeometry Center="22,22" RadiusX="18" RadiusY="18"/>
+                </Image.Clip>
+            </Image>
+            <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Stretch" Margin="5,10,10,10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height" Height="Auto" Width="Auto" FontSize="18.667" FontFamily="MS Reference Sans Serif" Foreground="White"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="grid" Value="#FF004E99"/>
+                <Setter Property="Cursor" TargetName="grid" Value="Hand"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
 </ResourceDictionary>

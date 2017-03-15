@@ -4,24 +4,38 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImgurWPF_Flat"
-        Icon="Images\unnamed.png"
+        Icon="Images\imgur.png"
         mc:Ignorable="d"
-        Title="MainWindow" Height="576" Width="822" AllowsTransparency="True" WindowStyle="None" Background="#FF252E32">
-    
-        
-    
-    
-    <Grid x:Name="ImgurMainWindow" MinWidth="822" MinHeight="576">
+        Title="MainWindow" BorderThickness="5,5,5,5" Height="576" Width="822" AllowsTransparency="True" WindowStyle="None" Background="#FF252E32">
+
+    <Window.Resources>
+        <Style x:Key="{x:Type ContextMenu}" TargetType="{x:Type ContextMenu}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContextMenu}">
+                        <Border Background="#FF0066CC" BorderThickness="0" Opacity="0.96">
+                            <StackPanel Width="250" ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" Margin="0,10,0,10"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid x:Name="ImgurMainWindow" MinWidth="812" MinHeight="566">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <DockPanel x:Name="MenuPanel" HorizontalAlignment="Left" Height="{Binding ActualHeight, ElementName=window, Mode=OneWay}" LastChildFill="False" Margin="0" VerticalAlignment="Top" Width="250" Background="#FF1A2028">
             <Image x:Name="ImgurLogo" Height="50" VerticalAlignment="Top" Width="130" Source="Images/Imgur_logo.png" Margin="20,55,0,0"/>
-            <Button x:Name="MainPagebutton" Content="Main page" HorizontalAlignment="Left" Margin="-125,220,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource HomePage}"/>
-            <Button x:Name="PopularButton" Content="Popular" HorizontalAlignment="Left" Margin="-200,264,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonPopularTemplate}"/>
-            <Button x:Name="FavoritesButton" Content="Favorites" HorizontalAlignment="Left" Margin="-200,308,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonFavoriteTemplate}"/>
-            <Button x:Name="ImgurChatButton" Content="Imgur chat" HorizontalAlignment="Left" Margin="-200,352,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonChatTemplate}"/>
-            <Button x:Name="MemesButton" Content="Memes generator" HorizontalAlignment="Left" Margin="-200,396,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonMemesTemplate}"/>
+            <Button x:Name="MainPagebutton" Content="Main page" HorizontalAlignment="Left" Margin="-125,180,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource HomePage}"/>
+            <Button x:Name="PopularButton" Content="Popular" HorizontalAlignment="Left" Margin="-200,224,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonPopularTemplate}"/>
+            <Button x:Name="FavoritesButton" Content="Favorites" HorizontalAlignment="Left" Margin="-200,268,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonFavoriteTemplate}"/>
+            <Button x:Name="ImgurChatButton" Content="Imgur chat" HorizontalAlignment="Left" Margin="-200,312,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonChatTemplate}"/>
+            <Button x:Name="MemesButton" Content="Memes generator" HorizontalAlignment="Left" Margin="-200,356,0,0" VerticalAlignment="Top" Width="200" Height="44" Template="{DynamicResource ButtonMemesTemplate}"/>
             <Button x:Name="SettingsButton" Content="Settings" HorizontalAlignment="Left" Margin="-200,0,0,80" VerticalAlignment="Bottom" Width="200" Height="44" Template="{DynamicResource ButtonSettingsTemplate}"/>
 
         </DockPanel>
@@ -35,8 +49,18 @@
 
         <Image x:Name="MinimizeButton" HorizontalAlignment="Right" Height="24" Margin="0,10,70,0" VerticalAlignment="Top" Width="24" Source="Images/window-minimize.png" MouseLeftButtonUp="MinimizeButton_MouseLeftButtonUp" Cursor="Hand" MouseEnter="MinimizeButton_MouseEnter" MouseLeave="MinimizeButton_MouseLeave"/>
         <Image x:Name="MaximizeButton" HorizontalAlignment="Right" Height="24" Margin="0,10,40,0" VerticalAlignment="Top" Width="24" Source="Images/maximize.png" MouseLeftButtonUp="MaximizeButton_MouseLeftButtonUp" Cursor="Hand" MouseEnter="MaximizeButton_MouseEnter" MouseLeave="MaximizeButton_MouseLeave"/>
-        
 
+
+        <Button Uid="Images\icT.png" Content="Oleksandr"  Height="44" HorizontalAlignment="Left"  Name="UserButton" VerticalAlignment="Top" Width="250" Click="button1_Click" Template="{DynamicResource ButtonUserTemplate}" >
+            <Button.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Foreground="Snow" Header="First file"/>
+                    <MenuItem Foreground="Snow" Header="Second file"/>
+                    <MenuItem Foreground="Snow" Header="Third file"/>
+                    <MenuItem Foreground="Snow" Header="Fourth file"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
 
 
     </Grid>
