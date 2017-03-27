@@ -104,11 +104,11 @@ namespace ImgurWPF_Flat
                 ImgurLogo.Margin = marg;
 
                 marg = image1_Copy.Margin;
-                marg.Left = 10;
+                marg.Left = 6;
                 image1_Copy.Margin = marg;
 
                 animation.From = 250;
-                animation.To = 49;
+                animation.To = 44;
                 animation.Duration = new Duration(TimeSpan.FromMilliseconds(200));
                 MenuPanel.BeginAnimation(Panel.WidthProperty, animation);
                 //MenuPanel.Width = 49;
@@ -141,7 +141,7 @@ namespace ImgurWPF_Flat
             }
             else
             {
-                animation.From = 49;
+                animation.From = 44;
                 animation.To = 250;
                 animation.Duration = new Duration(TimeSpan.FromMilliseconds(200));
                 MenuPanel.BeginAnimation(Panel.WidthProperty, animation);

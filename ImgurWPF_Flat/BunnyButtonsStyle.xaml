@@ -136,5 +136,22 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    
+    <ControlTemplate x:Key="MenuItemUserTemplate" TargetType="{x:Type MenuItem}">
+        <Grid x:Name="grid" Background="#FF0066CC">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="186"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlock" Grid.Column="1" Margin="10" TextWrapping="Wrap" Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Width, Height" Foreground="White" FontFamily="MS Reference Sans Serif" FontSize="18.667"/>
+            <Image x:Name="image" Margin="10,0" Source="{Binding Uid, RelativeSource={RelativeSource TemplatedParent}}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="grid" Value="#FF004E99"/>
+                <Setter Property="Cursor" TargetName="grid" Value="Hand"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
 </ResourceDictionary>

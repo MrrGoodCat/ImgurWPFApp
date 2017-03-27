@@ -16,7 +16,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ContextMenu}">
                         <Border Background="#FF0066CC" BorderThickness="0" Opacity="0.96">
-                            <StackPanel Width="250" ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" Margin="0,10,0,10"/>
+                            <StackPanel Width="250" ClipToBounds="True" Orientation="Vertical" IsItemsHost="True" Margin="0,0,0,0"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -54,10 +54,11 @@
         <Button Uid="Images\icT.png" Content="Oleksandr"  Height="44" HorizontalAlignment="Left"  Name="UserButton" VerticalAlignment="Top" Width="250" Click="button1_Click" Template="{DynamicResource ButtonUserTemplate}" >
             <Button.ContextMenu>
                 <ContextMenu >
-                    <MenuItem Foreground="Snow" Header="First file"/>
-                    <MenuItem Foreground="Snow" Header="Second file"/>
-                    <MenuItem Foreground="Snow" Header="Third file"/>
-                    <MenuItem Foreground="Snow" Header="Fourth file"/>
+                    <MenuItem Name="userMenuItemSomething" Foreground="Snow" Header="Something" Template="{DynamicResource MenuItemUserTemplate}"/>
+                    <MenuItem Name="userMenuItemSettings" Foreground="Snow" Header="Settings" Template="{DynamicResource MenuItemUserTemplate}"/>
+                    <MenuItem Name="userMenuItemHelp" Foreground="Snow" Header="Help" Template="{DynamicResource MenuItemUserTemplate}"/>
+                    <Separator Name="userMenuSeparator" />
+                    <MenuItem Name="userMenuItemLogIn" Foreground="Snow" Header="Log in" Template="{DynamicResource MenuItemUserTemplate}"/>
                 </ContextMenu>
             </Button.ContextMenu>
         </Button>
