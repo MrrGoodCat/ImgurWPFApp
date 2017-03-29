@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F57D2C6-F4F5-4A21-A335-1097A910DE0E}</ProjectGuid>
+    <ProjectGuid>{013850C3-0DDD-48F6-85F7-83C6C2AE7F73}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ImgurWPF_Flat</RootNamespace>
-    <AssemblyName>ImgurWPF_Flat</AssemblyName>
+    <RootNamespace>LogIn</RootNamespace>
+    <AssemblyName>LogIn</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,14 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Imgur.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ImgurAPI\Imgur.API.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>ImgurAPI\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -63,14 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BunnyButtonsStyle.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Dictionary1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,7 +69,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,62 +96,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\delphi_logo_clear.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\1488328279_Hamburger_Round.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\minus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\window-minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Imgur_logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\maximize.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Imgur.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\unnamed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\document.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Chat.png" />
-    <Resource Include="Images\Fav.png" />
-    <Resource Include="Images\Favorite.png" />
-    <Resource Include="Images\HomePage.png" />
-    <Resource Include="Images\HomePageOver.png" />
-    <Resource Include="Images\ImgurChat.png" />
-    <Resource Include="Images\Memes.png" />
-    <Resource Include="Images\MemesOver.png" />
-    <Resource Include="Images\Pop.png" />
-    <Resource Include="Images\Popular.png" />
-    <Resource Include="Images\settings.png" />
-    <Resource Include="Images\settingsOrig.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\icT.png" />
-    <Resource Include="Images\imgur.png" />
-    <Resource Include="Images\TabWindow.png" />
-    <Content Include="ImgurAPI\Imgur.API.dll" />
-    <Resource Include="ImgurAPI\Imgur.API.xml" />
-    <Content Include="ImgurAPI\Newtonsoft.Json.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LogIn\LogIn.csproj">
-      <Project>{013850c3-0ddd-48f6-85f7-83c6c2ae7f73}</Project>
-      <Name>LogIn</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
