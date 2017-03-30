@@ -54,8 +54,8 @@
         <Button Uid="Images\icT.png" Content="Oleksandr"  Height="44" HorizontalAlignment="Left"  Name="UserButton" VerticalAlignment="Top" Width="250" Click="button1_Click" Template="{DynamicResource ButtonUserTemplate}" >
             <Button.ContextMenu>
                 <ContextMenu >
-                    <MenuItem Name="userMenuItemSomething" Foreground="Snow" Header="Something" Template="{DynamicResource MenuItemUserTemplate}"/>
-                    <MenuItem Name="userMenuItemSettings" Foreground="Snow" Header="Settings" Template="{DynamicResource MenuItemUserTemplate}"/>
+                    <MenuItem Name="userMenuItemSomething" Foreground="Snow" Header="Something" Template="{DynamicResource MenuItemUserTemplate}" Visibility="Collapsed"/>
+                    <MenuItem Name="userMenuItemSettings" Foreground="Snow" Header="Settings" Template="{DynamicResource MenuItemUserTemplate}" Visibility="Collapsed"/>
                     <MenuItem Name="userMenuItemHelp" Foreground="Snow" Header="Help" Template="{DynamicResource MenuItemUserTemplate}"/>
                     <Separator Name="userMenuSeparator" />
                     <MenuItem Name="userMenuItemLogIn" Foreground="Snow" Header="Log in" Template="{DynamicResource MenuItemUserTemplate}"/>
