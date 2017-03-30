@@ -41,7 +41,6 @@
         </DockPanel>
         <DockPanel HorizontalAlignment="Left" Height="44" LastChildFill="False" Margin="0" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=window, Mode=OneWay}" Background="#FF0066CC" MouseLeftButtonDown="DockPanel_MouseLeftButtonDown">
             <Label x:Name="label" Content="Imgur desktop client" Height="24" VerticalAlignment="Top" Width="150" Margin="50,10,0,0" FontSize="16" Padding="0" Foreground="White"/>
-            <Image x:Name="image2" Height="44" VerticalAlignment="Top" Width="100"/>
         </DockPanel>
         <!--<Image x:Name="image1" HorizontalAlignment="Left" Height="32" Margin="200,62,0,0" VerticalAlignment="Top" Width="32" Source="Images/1488328279_Hamburger_Round.png"/>-->
         <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="32" Margin="200,62,0,0" VerticalAlignment="Top" Width="32" Source="Images/1488328279_Hamburger_Round.png" Cursor="Hand" MouseLeftButtonDown="image1_Copy_MouseLeftButtonDown"/>

@@ -14,6 +14,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LogIn;
+
 
 namespace ImgurWPF_Flat
 {
@@ -190,6 +192,12 @@ namespace ImgurWPF_Flat
             (sender as Button).ContextMenu.PlacementTarget = (sender as Button);
             (sender as Button).ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             (sender as Button).ContextMenu.IsOpen = true;
+            LogIn.MainWindow login = new LogIn.MainWindow();
+            login.Owner = this;
+            login.Show();
+
+            this.WindowState = WindowState.Normal;
+            this.Activate();
         }
 
     }
