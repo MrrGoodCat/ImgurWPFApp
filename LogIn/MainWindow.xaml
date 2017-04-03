@@ -5,9 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogIn"
         mc:Ignorable="d"
-        Title="MainWindow" Height="364" Width="300" Visibility="Visible" Background="{x:Null}" BorderThickness="1" WindowStyle="None" AllowsTransparency="True" BorderBrush="#19662028">
+        Title="MainWindow" Height="314" Width="500" Visibility="Visible" Background="{x:Null}" BorderThickness="1" WindowStyle="None" AllowsTransparency="True" BorderBrush="#4C662028">
     <Grid x:Name="LogInWindowGrid">
-        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="364" LastChildFill="False" VerticalAlignment="Top" Width="300" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF1A2028"/>
+        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="312" LastChildFill="False" VerticalAlignment="Top" Width="498" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF1A2028" Margin="0"/>
         <Image x:Name="CloseButton" Height="24" Margin="0" VerticalAlignment="Top" Width="24" Source="Images/Close.png" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Cursor="Hand" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave" HorizontalAlignment="Right"/>
+        <TextBox Name="UserName" Width="200" Height="44" Background="#FF1A1E28">
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
+                    <GradientStop Color="#FFABADB3" Offset="0.05"/>
+                    <GradientStop Color="#FFE2E3EA" Offset="0.07"/>
+                    <GradientStop Color="#4C662028" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
     </Grid>
 </Window>
