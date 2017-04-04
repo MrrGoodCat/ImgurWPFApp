@@ -154,4 +154,10 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
+    <ControlTemplate x:Key="TextBoxUserNameTemplate" TargetType="{x:Type TextBox}">
+        <Grid Background="#FF111923">
+            <TextBox x:Name="textBox" Margin="0,4,0,0" TextWrapping="Wrap" Text="TextBox" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderThickness="0" SelectionBrush="#FF09111C" Width="184" Height="28" FontSize="18" FontFamily="MS Reference Sans Serif" VerticalAlignment="Top" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        </Grid>
+    </ControlTemplate>
+
 </ResourceDictionary>

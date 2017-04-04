@@ -7,16 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="314" Width="500" Visibility="Visible" Background="{x:Null}" BorderThickness="1" WindowStyle="None" AllowsTransparency="True" BorderBrush="#4C662028">
     <Grid x:Name="LogInWindowGrid">
-        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="312" LastChildFill="False" VerticalAlignment="Top" Width="498" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF1A2028" Margin="0"/>
+        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="312" LastChildFill="False" VerticalAlignment="Top" Width="498" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF1A2028" Margin="0">
+        </DockPanel>
         <Image x:Name="CloseButton" Height="24" Margin="0" VerticalAlignment="Top" Width="24" Source="Images/Close.png" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Cursor="Hand" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave" HorizontalAlignment="Right"/>
-        <TextBox Name="UserName" Width="200" Height="44" Background="#FF1A1E28">
-            <TextBox.BorderBrush>
-                <LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
-                    <GradientStop Color="#FFABADB3" Offset="0.05"/>
-                    <GradientStop Color="#FFE2E3EA" Offset="0.07"/>
-                    <GradientStop Color="#4C662028" Offset="1"/>
-                </LinearGradientBrush>
-            </TextBox.BorderBrush>
-        </TextBox>
+            <TextBox x:Name="textBox" Height="34" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Template="{DynamicResource TextBoxUserNameTemplate}" HorizontalAlignment="Right" Margin="0,100,100,0"/>
+            <PasswordBox x:Name="passwordBox" Height="34" VerticalAlignment="Top" Width="200" HorizontalAlignment="Right" Margin="0,149,100,0" Template="{DynamicResource PasswordBoxUserPassTemplate1}" Background="#FF111923"/>
     </Grid>
 </Window>
