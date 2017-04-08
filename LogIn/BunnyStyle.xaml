@@ -4,7 +4,7 @@
     
     <ControlTemplate x:Key="TextBoxUserNameTemplate" TargetType="{x:Type TextBox}">
         <Grid Background="#FF111923">
-            <TextBox x:Name="textBox" Margin="0,4,0,0" TextWrapping="Wrap" Text="TextBox" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderThickness="0" SelectionBrush="#FF3399FF" Width="184" Height="28" FontSize="18" FontFamily="MS Reference Sans Serif" VerticalAlignment="Top" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+            <TextBox x:Name="textBox" Margin="0,4,0,0" TextWrapping="Wrap" Text="" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" BorderThickness="0" SelectionBrush="#FF3399FF" Width="234" Height="28" FontSize="18" FontFamily="MS Reference Sans Serif" VerticalAlignment="Top" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         </Grid>
     </ControlTemplate>
 
@@ -12,5 +12,23 @@
         <Grid Background="#FF111923">
             <PasswordBox x:Name="passwordBox" HorizontalAlignment="Stretch" Margin="0" d:LayoutOverrides="Width, Height" VerticalAlignment="Stretch" Background="{x:Null}" BorderBrush="{x:Null}" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionBrush="#FF09111C" FontSize="18" FontFamily="MS Reference Sans Serif" Padding="0,2,0,0"/>
         </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="TextBoxPasswordTemplate" TargetType="{x:Type TextBox}">
+        <Grid Background="#FF111923" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200">
+            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Stretch" Margin="0,4,0,0" Background="#FF111923" BorderBrush="{x:Null}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="30" FontSize="18" FontFamily="MS Reference Sans Serif" BorderThickness="0" SelectionBrush="{x:Null}" Width="184"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ButtonLogInTemplate" TargetType="{x:Type Button}">
+        <Grid x:Name="grid" Background="#FF111923" Cursor="Hand">
+            <TextBlock x:Name="textBlock" Margin="10" TextWrapping="Wrap" Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" d:LayoutOverrides="Height" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="66" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontSize="18" FontFamily="MS Reference Sans Serif" Padding="0,1,0,0"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="grid" Value="#FF1A2028"/>
+                <Setter Property="Foreground" TargetName="textBlock" Value="#FF89C61E"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
     </ControlTemplate>
 </ResourceDictionary>

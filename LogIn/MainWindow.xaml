@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogIn"
         mc:Ignorable="d"
-        Title="MainWindow" Height="314" Width="500" Visibility="Visible" Background="{x:Null}" BorderThickness="1" WindowStyle="None" AllowsTransparency="True" BorderBrush="#4C662028">
+        Title="MainWindow" Height="314" Width="280" Visibility="Visible" Background="{x:Null}" BorderThickness="1" WindowStyle="None" AllowsTransparency="True" BorderBrush="#4C662028">
     <Grid x:Name="LogInWindowGrid">
-        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="312" LastChildFill="False" VerticalAlignment="Top" Width="498" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF1A2028" Margin="0">
-        </DockPanel>
+        <DockPanel x:Name="LogInWindowPanel" HorizontalAlignment="Left" Height="312" LastChildFill="False" VerticalAlignment="Top" Width="278" MouseLeftButtonDown="LogInWindowPanel_MouseLeftButtonDown" Background="#FF000200"/>
         <Image x:Name="CloseButton" Height="24" Margin="0" VerticalAlignment="Top" Width="24" Source="Images/Close.png" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp" Cursor="Hand" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave" HorizontalAlignment="Right"/>
-            <TextBox x:Name="textBox" Height="34" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" Template="{DynamicResource TextBoxUserNameTemplate}" HorizontalAlignment="Right" Margin="0,100,100,0"/>
-            <PasswordBox x:Name="passwordBox" Height="34" VerticalAlignment="Top" Width="200" HorizontalAlignment="Right" Margin="0,149,100,0" Template="{DynamicResource PasswordBoxUserPassTemplate1}" Background="#FF111923"/>
+        <TextBox x:Name="textBox" Height="34" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="250" Template="{DynamicResource TextBoxUserNameTemplate}" Margin="0,123,0,0"/>
+        <PasswordBox x:Name="passwordBox" Margin="0,191,0,0" VerticalAlignment="Top" Width="250" Height="34" Background="#FF111923" BorderBrush="{x:Null}" BorderThickness="0" CaretBrush="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" SelectionBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontSize="18" Padding="8,4,8,0" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="label1" Content="Email" Margin="0,89,0,0" VerticalAlignment="Top" Height="34" Width="58" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontSize="18" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="label2" Content="Password" Margin="0,157,0,0" VerticalAlignment="Top" Width="96" Height="34" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" FontSize="18" FontFamily="MS Reference Sans Serif"/>
+        <Image x:Name="image" Height="85" Margin="0" VerticalAlignment="Top" Width="178" Source="Images/ImgurLogoGif.gif"/>
+        <Button x:Name="button" Content="LOG IN" Margin="0,240,0,0" VerticalAlignment="Top" Template="{DynamicResource ButtonLogInTemplate}" Height="44" Width="250"/>
+
     </Grid>
 </Window>
